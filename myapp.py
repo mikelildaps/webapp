@@ -4,15 +4,13 @@ from flask import Flask,render_template
 #----------------1.Init app-----------------
 app = Flask(__name__)
 #----------------2. Routers-----------------
-@app.route('/')
-def index():
-    return 'Hello world'
+
 
 @app.route('/bar')
 def bar():
     return render_template('bar.html')
 
-@app.route('/foo')
+@app.route('/')
 def foo():
     return render_template('foo.html')
 
